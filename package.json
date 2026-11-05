@@ -1,0 +1,28 @@
+{
+  "name": "dsh-speech-whisper",
+  "version": "0.1.0",
+  "description": "Local Whisper speech-to-text provider for DeepSeek Harness — French and 90+ languages, CPU only.",
+  "keywords": ["dsh-plugin", "dsh", "cordis", "speech-to-text", "whisper", "voice", "french"],
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    }
+  },
+  "files": ["lib", "README.md", "LICENSE"],
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}
