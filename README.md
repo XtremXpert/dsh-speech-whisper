@@ -2,8 +2,9 @@
 
 A local **Whisper** speech-to-text provider plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness).
 
-> **Statut : squelette.** Le greffon s'enregistre sur le seam `speechToText` et apparaît dans l'interface vocale.
-> La transcription n'est pas encore branchée : la carte de portage est dans [docs/PORTING.md](docs/PORTING.md).
+> **Statut : porté, compile.** Le fournisseur Whisper du fork est repris ici et se construit contre le contrat du
+> seam tel qu'il est dans DeepSeek Harness 0.2.2-rc.1. Reste à l'essayer en conditions réelles : téléchargement des
+> modèles, worker `sherpa-onnx`, dictée française. Voir [docs/PORTING.md](docs/PORTING.md).
 
 ## Pourquoi ce greffon
 

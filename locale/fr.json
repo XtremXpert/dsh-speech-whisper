@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Reconnaissance vocale locale",
+    "description": "Transcrivez les enregistrements en texte localement avec SenseVoice ou Whisper."
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "本地语音识别",
+    "description": "使用本机 SenseVoice 或 Whisper 将录音转写为文字。"
+  }
+}
