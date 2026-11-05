@@ -13,8 +13,7 @@ export const inject = ['speechToText']
  * deactivating the plugin rejects admission, cancels accepted work and joins it,
  * exactly like the official provider.
  */
-export function apply(ctx: Context): void {
+export function apply(ctx: Context): () => Promise<void> {
   const provider = new WhisperProvider()
-  const dispose = ctx.speechToText.register(provider)
-  ctx.effect(() => dispose)
+  return ctx.speechToText.register(provider)
 }
