@@ -46,6 +46,20 @@ Le contrat du fournisseur est recopié dans `src/contract.ts` plutôt qu'import�
 `@deepseek-ai/dsh-experimental-speech-to-text` est expérimental et interne au monorepo du harnais. La copie
 cite le fichier source et le commit dont elle est tirée — à revoir à chaque montée de version du seam.
 
+## Essai hors interface
+
+Le 5 novembre 2026, sur macOS arm64, avec les modèles Whisper small INT8 épinglés dans `runtime/assets.json` :
+
+| | |
+|---|---|
+| Audio | 5,77 s, français, synthèse macOS (`Amelie`), WAV 16 kHz mono |
+| Inférence | 1,53 s sur CPU, 2 fils |
+| Texte | « Bonjour, ceci est un essai de dictée en français pour vérifier que le module Wisp fonctionne correctement. » |
+
+Le seul écart est « Whisper », nom propre anglais, entendu « Wisp ». Cela valide les modèles, le runtime
+`sherpa-onnx` et le français ; cela ne valide pas encore le chemin interne du greffon (worker managé, boucle
+locale, préparation) — c'est l'étape suivante, dans l'interface.
+
 ## Licence
 
 MIT, comme le harnais lui-même : un greffon d'écosystème n'a pas à imposer une licence plus stricte que l'hôte.
